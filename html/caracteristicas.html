@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="" id="exe-node-20251030141437882RV5">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v3.0.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="license" type="text/html" href="https://creativecommons.org/licenses/by-sa/4.0/">
+<title>Características | EL MODELO RELACIONAL</title>
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/text/text.js"> </script><link rel="stylesheet" href="../idevices/text/text.css">
+<link rel="stylesheet" href="../content/css/base.css">
+<script src="../theme/default.js"> </script><link rel="stylesheet" href="../theme/content.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script><div class="exe-content exe-export pre-js siteNav-hidden"> <nav id="siteNav"> <ul> <li class="current-page-parent"> <a href="../index.html" class="main-node daddy">El modelo relacional</a><ul> <li> <a href="../html/introduccion.html" class="no-ch">Introducción</a>
+</li>
+<li class="active"> <a href="../html/caracteristicas.html" class="active no-ch">Características</a>
+</li>
+<li> <a href="../html/definiciones.html" class="no-ch">Definiciones</a>
+</li>
+<li> <a href="../html/atributo.html" class="no-ch">Atributo</a>
+</li>
+<li> <a href="../html/dominio.html" class="daddy">Dominio</a><ul class="other-section"> <li> <a href="../html/valores-nulos.html" class="no-ch">Valores nulos</a>
+</li>
+</ul>
+</li>
+<li> <a href="../html/tuplas-grado-y-cardinalidad.html" class="no-ch">Tuplas, grado y cardinalidad</a>
+</li>
+<li> <a href="../html/claves.html" class="no-ch">Claves</a>
+</li>
+<li> <a href="../html/implementacion-del-modelo.html" class="no-ch">Implementación del modelo</a>
+</li>
+<li> <a href="../html/autoria-y-licencia.html" class="no-ch">Autoría y Licencia</a>
+</li>
+</ul>
+</li>
+</ul></nav><main id="20251030141437882RV5" class="page"> <header id="header-20251030141437882RV5" class="page-header"> <h1 class="package-title">EL MODELO RELACIONAL</h1>
+<h2 class="page-title">Características</h2></header><div id="page-content-20251030141437882RV5" class="page-content"> <article id="202511032022382471A1" class="box"> <header class="box-head"> <div class="box-icon exe-icon"> <img src="../theme/icons/diary.png" alt="">
+</div>
+<button class="box-toggle box-toggle-on" title="Ocultar/Mostrar contenido"> <span>Ocultar/Mostrar contenido</span></button></header><div class="box-content"> <div id="20251103202238244HLD" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json"><div class="exe-text-template"><div class="textIdeviceContent">
+            <div class="exe-text-activity">
+                <div><p>El <strong>modelo relacional</strong> se caracteriza por:</p>
+<ul>
+<li>Ser sencillo y uniforme (colección de tablas y lenguajes declarativos).</li>
+<li>Tener una sólida fundamentación teórica: el modelo está definido con rigor matemático.</li>
+<li>Ser independiente del almacenamiento físico y de las aplicaciones.</li>
+</ul>
+<p>Como ya se conoce, una <abbr title="Base de Datos">BD</abbr> relacional consiste de un conjunto de tablas, cada una con un nombre único.</p>
+<ul>
+<li>Cada tabla tiene columnas que recogen los atributos que caracterizan cada entidad o elemento del mundo real.</li>
+<li>Cada fila en una tabla representa una relación entre un conjunto de valores.</li>
+</ul>
+<p>Como una tabla es una colección de tales relaciones, hay una <span style="text-decoration: underline;">correspondencia entre el concepto de tabla y el concepto matemático de relación</span>, del cual este modelo toma su nombre.</p>
+<p><br></p>
+<div class="figcaption header" id="header_imagen_5" style="text-align: center;"><strong>Ejemplo de relación</strong></div>
+<p><img src="../content/resources/20251103202238244HLD/mceclip0.png" alt="Ejemplo de relación, en forma de tabla con varios registros. Cada registro tiene una serie de atributos." id="imagen_5" class="imagen_5" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><span id="author_imagen_5">Marta Zorrilla</span>. <span class="sep"> (</span><a href="http://creativecommons.org/licenses/" id="license_imagen_5" target="_blanck" rel="noopener">CC BY-NC-SA</a><span class="sep">)<br><br>Sigamos estudiando las características más importantes del modelo relacional:&nbsp;<br><br></span></p>
+<ul>
+<li><span class="sep">Los datos son <strong>atómicos </strong>ó monovaluados.</span></li>
+<li><span class="sep">Los datos de cualquier columna son de <strong>un solo tipo</strong>.</span></li>
+<li><span class="sep">Cada <strong>columna </strong>posee un <strong>nombre único</strong>.</span></li>
+<li><span class="sep">El <strong>orden </strong>de las columnas <strong>no es de importancia</strong> para la tabla.</span></li>
+<li><span class="sep">Las columnas de una relación se conocen como <strong>atributos</strong>.</span></li>
+<li><span class="sep">Cada atributo tiene un <strong>dominio</strong>,</span></li>
+<li><span class="sep"><strong>No existen 2 filas</strong> en la tabla que sean <strong>idénticas</strong>.</span></li>
+<li><span class="sep">La información en las bases de datos son representados como <strong>datos explícitos</strong>.</span></li>
+<li><span class="sep">Cada relación tiene un <strong>nombre específico</strong> y diferente al resto de las relaciones.</span></li>
+<li><span class="sep">Los <strong>valores de los atributos son atómicos</strong>: en cada tupla, cada atributo (columna) toma un solo valor. Se dice que las relaciones están <strong>normalizadas</strong>.</span></li>
+<li><span class="sep">El <strong>orden de los atributos no importa</strong>: los atributos no están ordenados.</span></li>
+<li><span class="sep">Cada <strong>tupla es distinta de las demás</strong>: no hay tuplas duplicadas</span></li>
+<li><span class="sep">El <strong>orden de las tuplas no importa</strong>: las tuplas no están ordenadas.</span></li>
+<li><span class="sep">Los atributos son atómicos: en cada tupla, cada atributo (columna) toma un solo valor. Se dice que las relaciones están <strong>normalizadas.</strong></span></li>
+</ul><p class="clearfix"></p></div>
+            </div></div></div></div>
+</div></article>
+</div></main><div class="nav-buttons"> <a href="../html/introduccion.html" title="Anterior" class="nav-button nav-button-left"> <span>Anterior</span></a><a href="../html/definiciones.html" title="Siguiente" class="nav-button nav-button-right"> <span>Siguiente</span></a>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class="cc cc-by-sa"> <p> <span class="license-label">Licencia: </span><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="license">creative commons: attribution - share alike 4.0</a></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(nueva ventana)</span></span></a></p>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="" id="exe-node-20251030141532620KOW">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v3.0.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="license" type="text/html" href="https://creativecommons.org/licenses/by-sa/4.0/">
+<title>Implementación del modelo | EL MODELO RELACIONAL</title>
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/text/text.js"> </script><link rel="stylesheet" href="../idevices/text/text.css">
+<link rel="stylesheet" href="../content/css/base.css">
+<script src="../theme/default.js"> </script><link rel="stylesheet" href="../theme/content.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script><div class="exe-content exe-export pre-js siteNav-hidden"> <nav id="siteNav"> <ul> <li class="current-page-parent"> <a href="../index.html" class="main-node daddy">El modelo relacional</a><ul> <li> <a href="../html/introduccion.html" class="no-ch">Introducción</a>
+</li>
+<li> <a href="../html/caracteristicas.html" class="no-ch">Características</a>
+</li>
+<li> <a href="../html/definiciones.html" class="no-ch">Definiciones</a>
+</li>
+<li> <a href="../html/atributo.html" class="no-ch">Atributo</a>
+</li>
+<li> <a href="../html/dominio.html" class="daddy">Dominio</a><ul class="other-section"> <li> <a href="../html/valores-nulos.html" class="no-ch">Valores nulos</a>
+</li>
+</ul>
+</li>
+<li> <a href="../html/tuplas-grado-y-cardinalidad.html" class="no-ch">Tuplas, grado y cardinalidad</a>
+</li>
+<li> <a href="../html/claves.html" class="no-ch">Claves</a>
+</li>
+<li class="active"> <a href="../html/implementacion-del-modelo.html" class="active no-ch">Implementación del modelo</a>
+</li>
+<li> <a href="../html/autoria-y-licencia.html" class="no-ch">Autoría y Licencia</a>
+</li>
+</ul>
+</li>
+</ul></nav><main id="20251030141532620KOW" class="page"> <header id="header-20251030141532620KOW" class="page-header"> <h1 class="package-title">EL MODELO RELACIONAL</h1>
+<h2 class="page-title">Implementación del modelo</h2></header><div id="page-content-20251030141532620KOW" class="page-content"> <article id="20251103203352128JZ7" class="box"> <header class="box-head"> <div class="box-icon exe-icon"> <img src="../theme/icons/guide.png" alt="">
+</div>
+<h1 class="box-title">Reglas de integridad</h1>
+<button class="box-toggle box-toggle-on" title="Ocultar/Mostrar contenido"> <span>Ocultar/Mostrar contenido</span></button></header><div class="box-content"> <div id="20251103203352124COG" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json"><div class="exe-text-template"><div class="textIdeviceContent">
+            <div class="exe-text-activity">
+                <div><p><img src="https://bookdown.org/paranedagarcia/database/images/db-reglas.png" alt="Principales reglas de integridad."><span>&nbsp;</span>Reglas o restricciones de validación que controlan que los datos a registrar sean correctos.</p>
+<ul>
+<li><strong>Integridad de Dominio</strong>: Conjunto de valores válidos de un campo (propiedades del campo)</li>
+<li><strong>Integridad de Transiciones</strong>: Define los estados por lo que un registro puede pasar válidamente (operación previa)</li>
+<li><strong>Integridad de Entidades</strong>: Asegura la integridad de las tablas (claves, identificación)</li>
+<li><strong>Integridad Referencial</strong>: Mantienen y protegen vínculos entre tablas (propiedades de las relaciones)</li>
+<li><strong>Integridad de Bases de Datos</strong>: Referencian más de una tabla, gobiernan la DB como un todo.</li>
+<li><strong>Integridad de Transacciones</strong>: Controlan la forma como se manipulan los datos entre una o varias BD</li>
+</ul><p class="clearfix"></p></div>
+            </div></div></div></div>
+</div></article><article id="20251106212302488KPQ" class="box"> <header class="box-head"> <div class="box-icon exe-icon"> <img src="../theme/icons/collaborative.png" alt="">
+</div>
+<h1 class="box-title">Terminología</h1>
+<button class="box-toggle box-toggle-on" title="Ocultar/Mostrar contenido"> <span>Ocultar/Mostrar contenido</span></button></header><div class="box-content"> <div id="20251106212302483HC6" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json"><div class="exe-text-template"><div class="textIdeviceContent">
+            <div class="exe-text-activity">
+                <div><figure id="figure_imagen_6" class="exe-figure  position-center"><img src="../content/resources/20251106212302483HC6/mceclip1.png" alt="Traducción entre distintos términos a nivel de modelo, implementación lógica e implementación física" id="imagen_6" class="imagen_6" style="display: block; margin-left: auto; margin-right: auto;">
+<figcaption class="figcaption"><span id="author_imagen_6">Marta Zorrilla</span>. <span class="sep"> (</span><a href="http://creativecommons.org/licenses/" id="license_imagen_6" target="_blanck" rel="noopener">CC BY-NC-SA</a><span class="sep">)</span></figcaption>
+</figure>
+<p><br></p><p class="clearfix"></p></div>
+            </div></div></div></div>
+</div></article>
+</div></main><div class="nav-buttons"> <a href="../html/claves.html" title="Anterior" class="nav-button nav-button-left"> <span>Anterior</span></a><a href="../html/autoria-y-licencia.html" title="Siguiente" class="nav-button nav-button-right"> <span>Siguiente</span></a>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class="cc cc-by-sa"> <p> <span class="license-label">Licencia: </span><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="license">creative commons: attribution - share alike 4.0</a></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(nueva ventana)</span></span></a></p>
+</body>
+</html>

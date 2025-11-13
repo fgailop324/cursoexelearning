@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="" id="exe-node-20251030141338617QNX">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v3.0.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="license" type="text/html" href="https://creativecommons.org/licenses/by-sa/4.0/">
+<title>Introducción | EL MODELO RELACIONAL</title>
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/udl-content/udl-content.js"> </script><link rel="stylesheet" href="../idevices/udl-content/udl-content.css">
+<link rel="stylesheet" href="../content/css/base.css">
+<script src="../theme/default.js"> </script><link rel="stylesheet" href="../theme/content.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script><div class="exe-content exe-export pre-js siteNav-hidden"> <nav id="siteNav"> <ul> <li class="current-page-parent"> <a href="../index.html" class="main-node daddy">El modelo relacional</a><ul> <li class="active"> <a href="../html/introduccion.html" class="active no-ch">Introducción</a>
+</li>
+<li> <a href="../html/caracteristicas.html" class="no-ch">Características</a>
+</li>
+<li> <a href="../html/definiciones.html" class="no-ch">Definiciones</a>
+</li>
+<li> <a href="../html/atributo.html" class="no-ch">Atributo</a>
+</li>
+<li> <a href="../html/dominio.html" class="daddy">Dominio</a><ul class="other-section"> <li> <a href="../html/valores-nulos.html" class="no-ch">Valores nulos</a>
+</li>
+</ul>
+</li>
+<li> <a href="../html/tuplas-grado-y-cardinalidad.html" class="no-ch">Tuplas, grado y cardinalidad</a>
+</li>
+<li> <a href="../html/claves.html" class="no-ch">Claves</a>
+</li>
+<li> <a href="../html/implementacion-del-modelo.html" class="no-ch">Implementación del modelo</a>
+</li>
+<li> <a href="../html/autoria-y-licencia.html" class="no-ch">Autoría y Licencia</a>
+</li>
+</ul>
+</li>
+</ul></nav><main id="20251030141338617QNX" class="page"> <header id="header-20251030141338617QNX" class="page-header"> <h1 class="package-title">EL MODELO RELACIONAL</h1>
+<h2 class="page-title">Introducción</h2></header><div id="page-content-20251030141338617QNX" class="page-content"> <article id="202511032021483740YQ" class="box"> <header class="box-head"> <div class="box-icon exe-icon"> <img src="../theme/icons/guide.png" alt="">
+</div>
+<button class="box-toggle box-toggle-on" title="Ocultar/Mostrar contenido"> <span>Ocultar/Mostrar contenido</span></button></header><div class="box-content"> <div id="20251103202148371XL5" class="idevice_node udl-content" data-idevice-path="../idevices/udl-content/" data-idevice-type="udl-content"><div class="exe-udlContent exe-udlContent-representation"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p data-start="333" data-end="704">Las bases de datos forman parte de nuestra vida diaria, aunque muchas veces no nos demos cuenta. Cada vez que sacamos dinero de un cajero, compramos algo por Internet o hacemos una búsqueda en Google, estamos usando una base de datos. Detrás de cada una de estas acciones hay sistemas que almacenan, organizan y gestionan información para que todo funcione correctamente.</p>
+<p data-start="706" data-end="1055">Un<span>&nbsp;</span><strong data-start="709" data-end="735">sistema de información</strong><span>&nbsp;</span>es un conjunto de elementos (personas, datos, programas, procedimientos...) que trabajan juntos siguiendo unas normas para ayudar a una organización a realizar sus tareas.<br data-start="907" data-end="910">En los comienzos de la informática, la información se gestionaba mediante<span>&nbsp;</span><strong data-start="984" data-end="996">archivos</strong><span>&nbsp;</span>creados y manejados directamente por el sistema operativo.</p>
+<p data-start="1057" data-end="1735">Al principio, el acceso a los datos era<span>&nbsp;</span><strong data-start="1097" data-end="1111">secuencial</strong>, es decir, había que recorrer uno por uno todos los registros hasta encontrar el que interesaba. Además, este acceso se hacía utilizando<span>&nbsp;</span><strong data-start="1249" data-end="1269">lenguaje máquina</strong>, lo que hacía el proceso lento y complicado. Más adelante aparecieron los<span>&nbsp;</span><strong data-start="1344" data-end="1374">ficheros de acceso directo</strong>, que permitían ir directamente al dato deseado sin pasar por los anteriores.<br data-start="1451" data-end="1454">Aun así, estos sistemas tenían muchas limitaciones: no permitían<span>&nbsp;</span><strong data-start="1519" data-end="1548">relacionar datos entre sí</strong>, obligaban a<span>&nbsp;</span><strong data-start="1562" data-end="1586">duplicar información</strong><span>&nbsp;</span>(lo que aumentaba los errores) y los programas dependían totalmente de cómo estaban guardados los datos, lo que dificultaba hacer cambios o mejoras.</p>
+<p data-start="1737" data-end="2201">Para intentar solucionar estos problemas surgieron nuevos modelos de organización de datos.<br data-start="1828" data-end="1831">El primero fue el<span>&nbsp;</span><strong data-start="1849" data-end="1870">modelo jerárquico</strong>, que organizaba los datos en forma de árbol. Esto mejoraba un poco el acceso a la información, pero seguía sin ofrecer independencia entre los datos y los programas. Además, las consultas eran complicadas porque el lenguaje usado era muy técnico y “navegacional”, es decir, había que ir moviéndose por la estructura paso a paso.</p>
+<p data-start="2203" data-end="2394">Después apareció el<span>&nbsp;</span><strong data-start="2223" data-end="2240">modelo de red</strong>, que redujo la redundancia y facilitó las consultas, pero todavía no resolvía del todo los problemas de independencia entre los datos y las aplicaciones.</p>
+<p data-start="2396" data-end="2911">Finalmente llegó el<span>&nbsp;</span><strong data-start="2416" data-end="2437">modelo relacional</strong>, que supuso una auténtica revolución. Este modelo permitió organizar los datos en<span>&nbsp;</span><strong data-start="2520" data-end="2530">tablas</strong><span>&nbsp;</span>y relacionarlos fácilmente entre sí, evitando la duplicidad y facilitando su uso. Además, ofrecía<span>&nbsp;</span><strong data-start="2629" data-end="2678">independencia entre los datos y los programas</strong>, y un lenguaje de consulta más sencillo y potente.<br data-start="2729" data-end="2732">Gracias a todas estas ventajas, el modelo relacional se convirtió en el más utilizado y sigue siendo hoy en día la base de la mayoría de los sistemas de gestión de bases de datos.</p>
+<h2 data-start="439" data-end="496">🕓 Línea del tiempo: Evolución de los modelos de datos</h2>
+<div class="_tableContainer_1rjym_1">
+<div class="group _tableWrapper_1rjym_13 flex w-fit flex-col-reverse" tabindex="-1">
+<table data-start="498" data-end="1605" class="w-fit min-w-(--thread-content-width)" style="width: 99.9748%;">
+<thead data-start="498" data-end="571">
+<tr data-start="498" data-end="571">
+<th data-start="498" data-end="506" data-col-size="sm" style="width: 12.7172%; border-color: #2dc26b; border-style: solid;">Época</th>
+<th data-start="506" data-end="525" data-col-size="sm" style="width: 12.3377%; border-color: #2dc26b; border-style: solid;">Modelo o sistema</th>
+<th data-start="525" data-end="555" data-col-size="lg" style="width: 36.1388%; border-color: #2dc26b; border-style: solid;">Características principales</th>
+<th data-start="555" data-end="571" data-col-size="lg" style="width: 38.7812%; border-color: #2dc26b; border-style: solid;">Limitaciones</th>
+</tr>
+</thead>
+<tbody data-start="649" data-end="1605">
+<tr data-start="649" data-end="871">
+<td data-start="649" data-end="666" data-col-size="sm" style="width: 12.7172%;"><strong data-start="651" data-end="665">Años 50–60</strong></td>
+<td data-col-size="sm" data-start="666" data-end="693" style="width: 12.3377%;"><strong data-start="668" data-end="692">Sistemas de archivos</strong></td>
+<td data-col-size="lg" data-start="693" data-end="782" style="width: 36.1388%;">Los datos se guardaban en ficheros independientes. El acceso era secuencial o directo.</td>
+<td data-col-size="lg" data-start="782" data-end="871" style="width: 38.7812%;">Alta redundancia, difícil mantenimiento y fuerte dependencia entre datos y programas.</td>
+</tr>
+<tr data-start="872" data-end="1077">
+<td data-start="872" data-end="889" data-col-size="sm" style="width: 12.7172%;"><strong data-start="874" data-end="888">Años 60–70</strong></td>
+<td data-col-size="sm" data-start="889" data-end="913" style="width: 12.3377%;"><strong data-start="891" data-end="912">Modelo jerárquico</strong></td>
+<td data-col-size="lg" data-start="913" data-end="1012" style="width: 36.1388%;">Los datos se organizaban en forma de árbol (padre-hijo). Mejor organización y menos redundancia.</td>
+<td data-col-size="lg" data-start="1012" data-end="1077" style="width: 38.7812%;">Consultas muy complejas y poca independencia lógica y física.</td>
+</tr>
+<tr data-start="1078" data-end="1285">
+<td data-start="1078" data-end="1095" data-col-size="sm" style="width: 12.7172%;"><strong data-start="1080" data-end="1094">Años 70–80</strong></td>
+<td data-col-size="sm" data-start="1095" data-end="1115" style="width: 12.3377%;"><strong data-start="1097" data-end="1114">Modelo de red</strong></td>
+<td data-col-size="lg" data-start="1115" data-end="1212" style="width: 36.1388%;">Estructura más flexible: un registro puede tener varios padres e hijos. Consultas más rápidas.</td>
+<td data-col-size="lg" data-start="1212" data-end="1285" style="width: 38.7812%;">Aún existía dependencia entre datos y programas. Difícil de mantener.</td>
+</tr>
+<tr data-start="1286" data-end="1605">
+<td data-start="1286" data-end="1320" data-col-size="sm" style="width: 12.7172%;"><strong data-start="1288" data-end="1319">Desde los años 80 hasta hoy</strong></td>
+<td data-col-size="sm" data-start="1320" data-end="1344" style="width: 12.3377%;"><strong data-start="1322" data-end="1343">Modelo relacional</strong></td>
+<td data-col-size="lg" data-start="1344" data-end="1474" style="width: 36.1388%;">Los datos se guardan en tablas que pueden relacionarse entre sí mediante claves. Lenguaje de consulta (SQL) sencillo y potente.</td>
+<td data-col-size="lg" data-start="1474" data-end="1605" style="width: 38.7812%;">Menor rendimiento en algunos contextos específicos (grandes volúmenes o datos no estructurados), aunque es el modelo más usado.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p data-start="1607" data-end="1790">👉 <em data-start="1610" data-end="1790">Esta evolución muestra cómo la necesidad de independencia, flexibilidad y facilidad de uso llevó al desarrollo del modelo relacional, base de la mayoría de los sistemas actuales.</em></p>
+<hr data-start="1792" data-end="1795">
+<h2 data-start="1797" data-end="1842"><br></h2>
+<h2 data-start="1797" data-end="1842">🧩 Esquema comparativo de modelos de datos</h2>
+<div class="_tableContainer_1rjym_1">
+<div class="group _tableWrapper_1rjym_13 flex w-fit flex-col-reverse" tabindex="-1">
+<table data-start="1844" data-end="2517" class="w-fit min-w-(--thread-content-width)">
+<thead data-start="1844" data-end="1933">
+<tr data-start="1844" data-end="1933" style="border-color: #2dc26b; border-style: solid;">
+<th data-start="1844" data-end="1854" data-col-size="sm">Aspecto</th>
+<th data-start="1854" data-end="1876" data-col-size="sm">Sistema de archivos</th>
+<th data-start="1876" data-end="1896" data-col-size="sm">Modelo jerárquico</th>
+<th data-start="1896" data-end="1912" data-col-size="sm">Modelo de red</th>
+<th data-start="1912" data-end="1933" data-col-size="sm">Modelo relacional</th>
+</tr>
+</thead>
+<tbody data-start="2026" data-end="2517">
+<tr data-start="2026" data-end="2096">
+<td data-start="2026" data-end="2043" data-col-size="sm"><strong data-start="2028" data-end="2042">Estructura</strong></td>
+<td data-start="2043" data-end="2062" data-col-size="sm">Ficheros sueltos</td>
+<td data-start="2062" data-end="2070" data-col-size="sm">Árbol</td>
+<td data-start="2070" data-end="2086" data-col-size="sm">Red (gráfico)</td>
+<td data-start="2086" data-end="2096" data-col-size="sm">Tablas</td>
+</tr>
+<tr data-start="2097" data-end="2201">
+<td data-start="2097" data-end="2126" data-col-size="sm"><strong data-start="2099" data-end="2125">Relaciones entre datos</strong></td>
+<td data-start="2126" data-end="2139" data-col-size="sm">No existen</td>
+<td data-start="2139" data-end="2154" data-col-size="sm">Uno a muchos</td>
+<td data-start="2154" data-end="2172" data-col-size="sm">Muchos a muchos</td>
+<td data-start="2172" data-end="2201" data-col-size="sm">Definidas mediante claves</td>
+</tr>
+<tr data-start="2202" data-end="2267">
+<td data-start="2202" data-end="2229" data-col-size="sm"><strong data-start="2204" data-end="2228">Redundancia de datos</strong></td>
+<td data-start="2229" data-end="2240" data-col-size="sm">Muy alta</td>
+<td data-start="2240" data-end="2248" data-col-size="sm">Media</td>
+<td data-start="2248" data-end="2255" data-col-size="sm">Baja</td>
+<td data-start="2255" data-end="2267" data-col-size="sm">Muy baja</td>
+</tr>
+<tr data-start="2268" data-end="2342">
+<td data-start="2268" data-end="2312" data-col-size="sm"><strong data-start="2270" data-end="2311">Independencia entre datos y programas</strong></td>
+<td data-start="2312" data-end="2319" data-col-size="sm">Nula</td>
+<td data-start="2319" data-end="2326" data-col-size="sm">Baja</td>
+<td data-start="2326" data-end="2334" data-col-size="sm">Media</td>
+<td data-start="2334" data-end="2342" data-col-size="sm">Alta</td>
+</tr>
+<tr data-start="2343" data-end="2411">
+<td data-start="2343" data-end="2371" data-col-size="sm"><strong data-start="2345" data-end="2370">Facilidad de consulta</strong></td>
+<td data-col-size="sm" data-start="2371" data-end="2382">Muy baja</td>
+<td data-col-size="sm" data-start="2382" data-end="2389">Baja</td>
+<td data-col-size="sm" data-start="2389" data-end="2397">Media</td>
+<td data-col-size="sm" data-start="2397" data-end="2411">Alta (SQL)</td>
+</tr>
+<tr data-start="2412" data-end="2517">
+<td data-start="2412" data-end="2433" data-col-size="sm"><strong data-start="2414" data-end="2432">Ejemplo típico</strong></td>
+<td data-start="2433" data-end="2459" data-col-size="sm">Archivos de texto o CSV</td>
+<td data-start="2459" data-end="2469" data-col-size="sm">IBM IMS</td>
+<td data-start="2469" data-end="2488" data-col-size="sm">IDMS, TurboIMAGE</td>
+<td data-start="2488" data-end="2517" data-col-size="sm">Oracle, MySQL, PostgreSQL</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div><article class="exe-udlContent-content-simplified js-hidden"><header class='exe-udlContent-alt-content-title'><h2>Lectura facilitada</h2></header><p data-start="333" data-end="704">Las bases de datos forman parte de nuestra vida diaria, aunque muchas veces no nos demos cuenta. Cada vez que sacamos dinero de un cajero, compramos algo por Internet o hacemos una búsqueda en Google, estamos usando una base de datos. Detrás de cada una de estas acciones hay sistemas que almacenan, organizan y gestionan información para que todo funcione correctamente.</p>
+<p data-start="706" data-end="1055">Un<span>&nbsp;</span><strong data-start="709" data-end="735">sistema de información</strong><span>&nbsp;</span>es un conjunto de elementos (personas, datos, programas, procedimientos...) que trabajan juntos siguiendo unas normas para ayudar a una organización a realizar sus tareas.<br data-start="907" data-end="910">En los comienzos de la informática, la información se gestionaba mediante<span>&nbsp;</span><strong data-start="984" data-end="996">archivos</strong><span>&nbsp;</span>creados y manejados directamente por el sistema operativo.</p>
+<p data-start="1057" data-end="1735">Al principio, el acceso a los datos era<span>&nbsp;</span><strong data-start="1097" data-end="1111">secuencial</strong>, es decir, había que recorrer uno por uno todos los registros hasta encontrar el que interesaba. Además, este acceso se hacía utilizando<span>&nbsp;</span><strong data-start="1249" data-end="1269">lenguaje máquina</strong>, lo que hacía el proceso lento y complicado. Más adelante aparecieron los<span>&nbsp;</span><strong data-start="1344" data-end="1374">ficheros de acceso directo</strong>, que permitían ir directamente al dato deseado sin pasar por los anteriores.<br data-start="1451" data-end="1454">Aun así, estos sistemas tenían muchas limitaciones: no permitían<span>&nbsp;</span><strong data-start="1519" data-end="1548">relacionar datos entre sí</strong>, obligaban a<span>&nbsp;</span><strong data-start="1562" data-end="1586">duplicar información</strong><span>&nbsp;</span>(lo que aumentaba los errores) y los programas dependían totalmente de cómo estaban guardados los datos, lo que dificultaba hacer cambios o mejoras.</p>
+<p data-start="1737" data-end="2201">Para intentar solucionar estos problemas surgieron nuevos modelos de organización de datos.<br data-start="1828" data-end="1831">El primero fue el<span>&nbsp;</span><strong data-start="1849" data-end="1870">modelo jerárquico</strong>, que organizaba los datos en forma de árbol. Esto mejoraba un poco el acceso a la información, pero seguía sin ofrecer independencia entre los datos y los programas. Además, las consultas eran complicadas porque el lenguaje usado era muy técnico y “navegacional”, es decir, había que ir moviéndose por la estructura paso a paso.</p>
+<p data-start="2203" data-end="2394">Después apareció el<span>&nbsp;</span><strong data-start="2223" data-end="2240">modelo de red</strong>, que redujo la redundancia y facilitó las consultas, pero todavía no resolvía del todo los problemas de independencia entre los datos y las aplicaciones.</p>
+<p data-start="2396" data-end="2911">Finalmente llegó el<span>&nbsp;</span><strong data-start="2416" data-end="2437">modelo relacional</strong>, que supuso una auténtica revolución. Este modelo permitió organizar los datos en<span>&nbsp;</span><strong data-start="2520" data-end="2530">tablas</strong><span>&nbsp;</span>y relacionarlos fácilmente entre sí, evitando la duplicidad y facilitando su uso. Además, ofrecía<span>&nbsp;</span><strong data-start="2629" data-end="2678">independencia entre los datos y los programas</strong>, y un lenguaje de consulta más sencillo y potente.<br data-start="2729" data-end="2732">Gracias a todas estas ventajas, el modelo relacional se convirtió en el más utilizado y sigue siendo hoy en día la base de la mayoría de los sistemas de gestión de bases de datos.</p>
+
+
+<h2 data-start="439" data-end="496">🕓 Línea del tiempo: Evolución de los modelos de datos</h2>
+<div class="_tableContainer_1rjym_1">
+<div class="group _tableWrapper_1rjym_13 flex w-fit flex-col-reverse" tabindex="-1">
+<table data-start="498" data-end="1605" class="w-fit min-w-(--thread-content-width)">
+<thead data-start="498" data-end="571">
+<tr data-start="498" data-end="571">
+<th data-start="498" data-end="506" data-col-size="sm">Época</th>
+<th data-start="506" data-end="525" data-col-size="sm">Modelo o sistema</th>
+<th data-start="525" data-end="555" data-col-size="lg">Características principales</th>
+<th data-start="555" data-end="571" data-col-size="lg">Limitaciones</th>
+</tr>
+</thead>
+<tbody data-start="649" data-end="1605">
+<tr data-start="649" data-end="871">
+<td data-start="649" data-end="666" data-col-size="sm"><strong data-start="651" data-end="665">Años 50–60</strong></td>
+<td data-col-size="sm" data-start="666" data-end="693"><strong data-start="668" data-end="692">Sistemas de archivos</strong></td>
+<td data-col-size="lg" data-start="693" data-end="782">Los datos se guardaban en ficheros independientes. El acceso era secuencial o directo.</td>
+<td data-col-size="lg" data-start="782" data-end="871">Alta redundancia, difícil mantenimiento y fuerte dependencia entre datos y programas.</td>
+</tr>
+<tr data-start="872" data-end="1077">
+<td data-start="872" data-end="889" data-col-size="sm"><strong data-start="874" data-end="888">Años 60–70</strong></td>
+<td data-col-size="sm" data-start="889" data-end="913"><strong data-start="891" data-end="912">Modelo jerárquico</strong></td>
+<td data-col-size="lg" data-start="913" data-end="1012">Los datos se organizaban en forma de árbol (padre-hijo). Mejor organización y menos redundancia.</td>
+<td data-col-size="lg" data-start="1012" data-end="1077">Consultas muy complejas y poca independencia lógica y física.</td>
+</tr>
+<tr data-start="1078" data-end="1285">
+<td data-start="1078" data-end="1095" data-col-size="sm"><strong data-start="1080" data-end="1094">Años 70–80</strong></td>
+<td data-col-size="sm" data-start="1095" data-end="1115"><strong data-start="1097" data-end="1114">Modelo de red</strong></td>
+<td data-col-size="lg" data-start="1115" data-end="1212">Estructura más flexible: un registro puede tener varios padres e hijos. Consultas más rápidas.</td>
+<td data-col-size="lg" data-start="1212" data-end="1285">Aún existía dependencia entre datos y programas. Difícil de mantener.</td>
+</tr>
+<tr data-start="1286" data-end="1605">
+<td data-start="1286" data-end="1320" data-col-size="sm"><strong data-start="1288" data-end="1319">Desde los años 80 hasta hoy</strong></td>
+<td data-col-size="sm" data-start="1320" data-end="1344"><strong data-start="1322" data-end="1343">Modelo relacional</strong></td>
+<td data-col-size="lg" data-start="1344" data-end="1474">Los datos se guardan en tablas que pueden relacionarse entre sí mediante claves. Lenguaje de consulta (SQL) sencillo y potente.</td>
+<td data-col-size="lg" data-start="1474" data-end="1605">Menor rendimiento en algunos contextos específicos (grandes volúmenes o datos no estructurados), aunque es el modelo más usado.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p data-start="1607" data-end="1790">👉 <em data-start="1610" data-end="1790">Esta evolución muestra cómo la necesidad de independencia, flexibilidad y facilidad de uso llevó al desarrollo del modelo relacional, base de la mayoría de los sistemas actuales.</em></p>
+<hr data-start="1792" data-end="1795">
+<h2 data-start="1797" data-end="1842"><br></h2>
+
+<h2 data-start="1797" data-end="1842">🧩 Esquema comparativo de modelos de datos</h2>
+<div class="_tableContainer_1rjym_1">
+<div class="group _tableWrapper_1rjym_13 flex w-fit flex-col-reverse" tabindex="-1">
+<table data-start="1844" data-end="2517" class="w-fit min-w-(--thread-content-width)">
+<thead data-start="1844" data-end="1933">
+<tr data-start="1844" data-end="1933">
+<th data-start="1844" data-end="1854" data-col-size="sm">Aspecto</th>
+<th data-start="1854" data-end="1876" data-col-size="sm">Sistema de archivos</th>
+<th data-start="1876" data-end="1896" data-col-size="sm">Modelo jerárquico</th>
+<th data-start="1896" data-end="1912" data-col-size="sm">Modelo de red</th>
+<th data-start="1912" data-end="1933" data-col-size="sm">Modelo relacional</th>
+</tr>
+</thead>
+<tbody data-start="2026" data-end="2517">
+<tr data-start="2026" data-end="2096">
+<td data-start="2026" data-end="2043" data-col-size="sm"><strong data-start="2028" data-end="2042">Estructura</strong></td>
+<td data-start="2043" data-end="2062" data-col-size="sm">Ficheros sueltos</td>
+<td data-start="2062" data-end="2070" data-col-size="sm">Árbol</td>
+<td data-start="2070" data-end="2086" data-col-size="sm">Red (gráfico)</td>
+<td data-start="2086" data-end="2096" data-col-size="sm">Tablas</td>
+</tr>
+<tr data-start="2097" data-end="2201">
+<td data-start="2097" data-end="2126" data-col-size="sm"><strong data-start="2099" data-end="2125">Relaciones entre datos</strong></td>
+<td data-start="2126" data-end="2139" data-col-size="sm">No existen</td>
+<td data-start="2139" data-end="2154" data-col-size="sm">Uno a muchos</td>
+<td data-start="2154" data-end="2172" data-col-size="sm">Muchos a muchos</td>
+<td data-start="2172" data-end="2201" data-col-size="sm">Definidas mediante claves</td>
+</tr>
+<tr data-start="2202" data-end="2267">
+<td data-start="2202" data-end="2229" data-col-size="sm"><strong data-start="2204" data-end="2228">Redundancia de datos</strong></td>
+<td data-start="2229" data-end="2240" data-col-size="sm">Muy alta</td>
+<td data-start="2240" data-end="2248" data-col-size="sm">Media</td>
+<td data-start="2248" data-end="2255" data-col-size="sm">Baja</td>
+<td data-start="2255" data-end="2267" data-col-size="sm">Muy baja</td>
+</tr>
+<tr data-start="2268" data-end="2342">
+<td data-start="2268" data-end="2312" data-col-size="sm"><strong data-start="2270" data-end="2311">Independencia entre datos y programas</strong></td>
+<td data-start="2312" data-end="2319" data-col-size="sm">Nula</td>
+<td data-start="2319" data-end="2326" data-col-size="sm">Baja</td>
+<td data-start="2326" data-end="2334" data-col-size="sm">Media</td>
+<td data-start="2334" data-end="2342" data-col-size="sm">Alta</td>
+</tr>
+<tr data-start="2343" data-end="2411">
+<td data-start="2343" data-end="2371" data-col-size="sm"><strong data-start="2345" data-end="2370">Facilidad de consulta</strong></td>
+<td data-col-size="sm" data-start="2371" data-end="2382">Muy baja</td>
+<td data-col-size="sm" data-start="2382" data-end="2389">Baja</td>
+<td data-col-size="sm" data-start="2389" data-end="2397">Media</td>
+<td data-col-size="sm" data-start="2397" data-end="2411">Alta (SQL)</td>
+</tr>
+<tr data-start="2412" data-end="2517">
+<td data-start="2412" data-end="2433" data-col-size="sm"><strong data-start="2414" data-end="2432">Ejemplo típico</strong></td>
+<td data-start="2433" data-end="2459" data-col-size="sm">Archivos de texto o CSV</td>
+<td data-start="2459" data-end="2469" data-col-size="sm">IBM IMS</td>
+<td data-start="2469" data-end="2488" data-col-size="sm">IDMS, TurboIMAGE</td>
+<td data-start="2488" data-end="2517" data-col-size="sm">Oracle, MySQL, PostgreSQL</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><button class="exe-udlContent-alt-content-hide">Cerrar</button></article><article class="exe-udlContent-content-visual js-hidden"><header class='exe-udlContent-alt-content-title'><h2>Apoyo visual</h2></header><figure id="figure_imagen_4" class="exe-figure position-center" style="width: 1536px;"><img src="../content/resources/20251103202148371XL5/ChatGPT_Image_6_nov_2025_19_38_48_1.png" width="1536" height="1024" alt="Esquema sobre la evolución de los modelos de datos, desde los sistemas de archivos hasta el modelo relacional" id="imagen_4" class="imagen_4">
+<figcaption class="figcaption"><span id="author_imagen_4">Autoría propia</span>. <span class="sep"> (</span><a href="http://creativecommons.org/publicdomain/zero/1.0/deed.es" id="license_imagen_4" target="_blanck" rel="noopener">CC0</a><span class="sep">)</span></figcaption>
+</figure>
+<p><br></p><button class="exe-udlContent-alt-content-hide">Cerrar</button></article></div></section></div></div>
+</div></article>
+</div></main><div class="nav-buttons"> <a href="../index.html" title="Anterior" class="nav-button nav-button-left"> <span>Anterior</span></a><a href="../html/caracteristicas.html" title="Siguiente" class="nav-button nav-button-right"> <span>Siguiente</span></a>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class="cc cc-by-sa"> <p> <span class="license-label">Licencia: </span><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="license">creative commons: attribution - share alike 4.0</a></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(nueva ventana)</span></span></a></p>
+</body>
+</html>

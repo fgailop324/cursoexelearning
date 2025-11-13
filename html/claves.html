@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="" id="exe-node-20251030141524908JK3">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v3.0.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="license" type="text/html" href="https://creativecommons.org/licenses/by-sa/4.0/">
+<title>Claves | EL MODELO RELACIONAL</title>
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/text/text.js"> </script><link rel="stylesheet" href="../idevices/text/text.css">
+<link rel="stylesheet" href="../content/css/base.css">
+<script src="../theme/default.js"> </script><link rel="stylesheet" href="../theme/content.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script><div class="exe-content exe-export pre-js siteNav-hidden"> <nav id="siteNav"> <ul> <li class="current-page-parent"> <a href="../index.html" class="main-node daddy">El modelo relacional</a><ul> <li> <a href="../html/introduccion.html" class="no-ch">Introducción</a>
+</li>
+<li> <a href="../html/caracteristicas.html" class="no-ch">Características</a>
+</li>
+<li> <a href="../html/definiciones.html" class="no-ch">Definiciones</a>
+</li>
+<li> <a href="../html/atributo.html" class="no-ch">Atributo</a>
+</li>
+<li> <a href="../html/dominio.html" class="daddy">Dominio</a><ul class="other-section"> <li> <a href="../html/valores-nulos.html" class="no-ch">Valores nulos</a>
+</li>
+</ul>
+</li>
+<li> <a href="../html/tuplas-grado-y-cardinalidad.html" class="no-ch">Tuplas, grado y cardinalidad</a>
+</li>
+<li class="active"> <a href="../html/claves.html" class="active no-ch">Claves</a>
+</li>
+<li> <a href="../html/implementacion-del-modelo.html" class="no-ch">Implementación del modelo</a>
+</li>
+<li> <a href="../html/autoria-y-licencia.html" class="no-ch">Autoría y Licencia</a>
+</li>
+</ul>
+</li>
+</ul></nav><main id="20251030141524908JK3" class="page"> <header id="header-20251030141524908JK3" class="page-header"> <h1 class="package-title">EL MODELO RELACIONAL</h1>
+<h2 class="page-title">Claves</h2></header><div id="page-content-20251030141524908JK3" class="page-content"> <article id="20251103203521787TBN" class="box no-header"> <div class="box-head"> <button class="box-toggle box-toggle-on" title="Ocultar/Mostrar contenido"> <span>Ocultar/Mostrar contenido</span></button>
+</div>
+<div class="box-content"> <div id="20251103203521783PQW" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json"><div class="exe-text-template"><div class="textIdeviceContent">
+            <div class="exe-text-activity">
+                <div><p>Ya que en una relación no hay tuplas repetidas, éstas se pueden distinguir unas de otras, es decir, se pueden identificar de modo único. La forma de identificarlas es mediante los valores de sus atributos.</p>
+<p><strong>Clave candidata</strong></p>
+<p>Conjunto de atributos que permiten identificar en forma única cada tupla de la relación. Es decir columnas cuyos valores no se repiten para esa tabla. Los atributos candidatos para una tabla de individuos (clientes, pacientes, etc.) es el ‘rut’, un número de seguro social, un ‘id’ de cliente (numérico o de caracter).</p>
+<p><strong>Clave primaria</strong></p>
+<p>Clave candidata que se escoge como identificador de las tuplas. Se elige como primaria la candidata que identifique mejor a cada tupla en el contexto de la base de datos. Por ejemplo un atributo con el RUT sería clave candidata de una tabla de clientes, aunque si en esa relación existe un atributo de código de cliente, este sería mejor candidato para clave principal, porque es mejor identificador para ese contexto.</p>
+<p><strong>Clave alternativa</strong></p>
+<p>Cualquier clave candidata que no sea primaria y que también puede identificar de manera única una tupla. Al momento de crear la relación como tabla en la Base de Datos se debe definir una constraints de tipo UNIQUE.</p>
+<p><strong>Clave externa, ajena o foránea</strong></p>
+<p>Atributo cuyos valores coinciden con una clave candidata (normalmente primaria) de otra tabla.</p>
+<p></p>
+<p>En bases de datos son muy utilizados los siguientes acrónimos cuando nos referimos a claves:</p>
+<p><abbr title="Primary Key">PK:</abbr> <em><span lang="en">Primary Key</span></em></p>
+<p><abbr title="Foreign Key">FK: </abbr><em><span lang="en">Foreign Key</span></em></p>
+<figure class="exe-figure exe-media position-center license-pd" style="width: 560px;">
+<figcaption class="figcaption header"><strong>Clave candidata</strong></figcaption>
+<iframe width="560" height="314" src="https://www.youtube.com/embed/HGPBYW68dok?si=MJnmVqFG-bd7Nb-t" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe>
+<figcaption class="figcaption"><span class="author">Universidad de Alicante</span>. <span class="title"><em>Clave candidata</em></span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p></p><p class="clearfix"></p></div>
+            </div></div></div></div>
+</div></article>
+</div></main><div class="nav-buttons"> <a href="../html/tuplas-grado-y-cardinalidad.html" title="Anterior" class="nav-button nav-button-left"> <span>Anterior</span></a><a href="../html/implementacion-del-modelo.html" title="Siguiente" class="nav-button nav-button-right"> <span>Siguiente</span></a>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class="cc cc-by-sa"> <p> <span class="license-label">Licencia: </span><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="license">creative commons: attribution - share alike 4.0</a></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(nueva ventana)</span></span></a></p>
+</body>
+</html>
